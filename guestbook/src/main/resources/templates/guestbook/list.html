@@ -5,7 +5,14 @@
 
     <th:block th:fragment="content">
 
-        <h1>GuestBook List Page</h1>
+        <h1 class="mt-4">GuestBook List Page
+            <span>
+                <a th:href="@{/guestbook/register}">
+                    <button type="button" class="btn btn-outline-primary">REGISTER
+                    </button>
+                </a>
+            </span>
+        </h1>
 
         <table class="table table-striped">
 
@@ -46,6 +53,18 @@
             </li>
 
         </ul>
+
+        <script th:inline="javascript">
+
+            var msg = [[${msg}]];
+
+            console.log(msg);
+
+            if (msg) {
+                $(".modal").modal();
+            }
+
+        </script>
 
     </th:block>
 
