@@ -61,4 +61,9 @@ public class GuestbookServiceImpl implements GuestbookService {
             repository.save(entity);
         }
     }
+
+    @Override
+    public void remove(Long gno) {
+        repository.deleteById(gno);
+    }
 }

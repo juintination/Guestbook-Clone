@@ -9,6 +9,8 @@
 
         <form action="/guestbook/modify" method="post">
 
+            <input type="hidden" name="page" th:value="${requestDTO.page}">
+
             <div class="form-group">
                 <label >Gno</label>
                 <input type="text" class="form-control" name="gno" th:value="${dto.gno}" readonly >
@@ -43,6 +45,7 @@
 
         <button type="button" class="btn btn-primary modifyBtn">Modify</button>
         <button type="button" class="btn btn-info listBtn">List</button>
+        <button type="button" class="btn btn-danger removeBtn">Remove</button>
 
         <script th:inline="javascript">
 
@@ -80,6 +83,16 @@
                 actionForm.submit();
 
             })
+
+            $(".removeBtn").click(function() {
+
+                actionForm
+                    .attr("action", "/guestbook/remove")
+                    .attr("method","post");
+
+                actionForm.submit();
+
+            });
 
         </script>
 
