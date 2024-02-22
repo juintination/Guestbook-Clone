@@ -87,11 +87,14 @@
 
             $(".removeBtn").click(function() {
 
+                if (!confirm("삭제하시겠습니까?")) {
+                    return ;
+                }
+
                 actionForm
                     .attr("action", "/guestbook/remove")
-                    .attr("method","post");
-
-                actionForm.submit();
+                    .attr("method","post")
+                    .submit();
 
             });
 
