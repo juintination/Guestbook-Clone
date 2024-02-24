@@ -10,6 +10,8 @@ This project uses the [Udacity Nanoderee Style](https://udacity.github.io/git-st
   - HTML
 - Framework
   - Spring boot 3.2.2
+- Template Engine
+  - Thymeleaf
 - Database
   - MySQL
 - ORM
