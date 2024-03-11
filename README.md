@@ -20,7 +20,7 @@ This project uses the [Udacity Nanoderee Style](https://udacity.github.io/git-st
 - Test
   - JUnit
 
-## Run Application with docker
+## Run Application with IntelliJ
 
 1. Git clone repository
 
